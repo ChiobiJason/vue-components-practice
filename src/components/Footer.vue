@@ -1,7 +1,11 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const year = ref(new Date().getFullYear());
+year.value = 2025;
+</script>
 
 <template>
-  <footer>Created by <span>Professor Pickle</span> &copy; 2025</footer>
+  <footer>Created by <span>Professor Pickle</span> &copy; {{ year }}</footer>
 </template>
 
 <style scoped>
