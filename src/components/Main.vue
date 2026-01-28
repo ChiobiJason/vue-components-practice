@@ -1,31 +1,16 @@
-/* BASE CSS */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<script setup></script>
 
-body {
-  background-color: #406473;
-  font-family: sans-serif;
-}
+<template>
+  <main>
+    <section>
+      <p>First, solve the problem. Then, write the code.</p>
+      <span>John Johnson</span>
+    </section>
+    <button>Another!</button>
+  </main>
+</template>
 
-#app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 25px;
-}
-/**********/
-
-/* HEADER CSS */
-header {
-  color: #ccd6d9;
-  margin-bottom: 25px;
-}
-/**********/
-
-/* MAIN CSS */
+<style scoped>
 main {
   background: #ccd6d9;
   max-width: 90%;
@@ -84,18 +69,4 @@ main button {
 main button:hover {
   transform: scale(1.05);
 }
-/**********/
-
-/* FOOTER CSS */
-footer {
-  position: fixed;
-  margin: 0 auto;
-  bottom: 0;
-  text-align: center;
-  color: #ccd6d9;
-  padding-bottom: 20px;
-}
-
-footer span {
-  font-family: cursive;
-}
+</style>
