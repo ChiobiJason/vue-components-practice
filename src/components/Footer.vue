@@ -7,7 +7,7 @@ year.value = 2025;
 
 <template>
   <footer>
-    Created by <span><a v-bind:href="href">Professor Pickle</a></span> &copy;
+    Created by <span><a :href>Professor Pickle</a></span> &copy;
     {{ year }}
   </footer>
 </template>

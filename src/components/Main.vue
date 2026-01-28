@@ -3,6 +3,7 @@ import { ref } from "vue";
 const quote = ref("First, solve the problem. Then, write the code.");
 const author = ref("John Johnson");
 const authorLink = ref("https://en.wikipedia.org/wiki/Steve_Jobs");
+const isButtonDisabled = ref(true);
 
 quote.value = "The only way to do great work is to love what you do.";
 author.value = "Steve Jobs";
@@ -13,10 +14,13 @@ author.value = "Steve Jobs";
     <section>
       <p>{{ quote }}</p>
       <span
-        ><a v-bind:href="authorLink">{{ author }}</a></span
+        ><a :href="authorLink">{{ author }}</a></span
       >
     </section>
-    <button>Another!</button>
+    <div id="buttons">
+      <button :disabled="isButtonDisabled">Another!</button>
+      <button :disabled="isButtonDisabled">Share</button>
+    </div>
   </main>
 </template>
 
@@ -78,5 +82,18 @@ main button {
 }
 main button:hover {
   transform: scale(1.05);
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+button:disabled {
+  background: grey;
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 </style>
