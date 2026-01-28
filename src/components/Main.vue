@@ -2,6 +2,8 @@
 import { ref } from "vue";
 const quote = ref("First, solve the problem. Then, write the code.");
 const author = ref("John Johnson");
+const authorLink = ref("https://en.wikipedia.org/wiki/Steve_Jobs");
+
 quote.value = "The only way to do great work is to love what you do.";
 author.value = "Steve Jobs";
 </script>
@@ -10,7 +12,9 @@ author.value = "Steve Jobs";
   <main>
     <section>
       <p>{{ quote }}</p>
-      <span>{{ author }}</span>
+      <span
+        ><a v-bind:href="authorLink">{{ author }}</a></span
+      >
     </section>
     <button>Another!</button>
   </main>
